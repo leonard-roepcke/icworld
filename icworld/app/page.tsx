@@ -3,8 +3,8 @@ import Header from "@/components/header";
 
 export default function Home() {
 	return(
-		<div className="m-4">
-			<Header />
+		<div>
+			<Header title="IC World"/>
 		</div>
 	)
 }
