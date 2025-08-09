@@ -9,7 +9,7 @@ export async function getAllIcs() {
   return data;
 }
 
-export async function getProductByNr(nr: string) {
+export async function getIcNameByNr(nr: string) {
   const { data, error } = await supabase
     .from('ics')
     .select('*')
@@ -17,6 +17,6 @@ export async function getProductByNr(nr: string) {
     .single();
 
   if (error) throw new Error(error.message);
-  return data;
+  return data.name;
 }
 

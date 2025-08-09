@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 
-export default function ResponsiveText({ title }: { title: string }) {
+export default function ResponsiveText({ text }: { text: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [fontSize, setFontSize] = useState(16);
 
@@ -25,7 +25,7 @@ export default function ResponsiveText({ title }: { title: string }) {
       style={{ fontSize: fontSize }}
       className="font-bold text-center flex-1 justify-center"
     >
-      {title}
+      {text}
     </div>
   );
 }
