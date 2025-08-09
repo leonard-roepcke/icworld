@@ -12,7 +12,9 @@ export default function InputField({ placeholder = "Input placeholder", onEnter 
                 className="border border-gray-300 rounded-full p-2 pl-4 w-full"
                 placeholder={placeholder}
                 onKeyUp={(event) => {
-                    console.log(event.currentTarget.value);
+                    if (onEnter){
+                        onEnter(event.currentTarget.value);
+                    }
                 }}
             />
         </div>
