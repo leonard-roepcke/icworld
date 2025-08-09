@@ -16,7 +16,7 @@ export default function IcCard({ nr }: Props) {
   }, [nr]);
   
   return (
-    <div className="p-5 flex-1 justify-center">
+    <div className="p-5 bg-blue-900 mx-5 rounded-xl">
       <ResponsiveText text={name} />
       <ResponsiveText text={nr} />
     </div>
