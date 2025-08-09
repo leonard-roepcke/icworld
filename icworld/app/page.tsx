@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Header from "@/components/header";
 import InputField from "@/components/inputfild";
 import ResponsiveText from "@/components/responsiveText";
 
