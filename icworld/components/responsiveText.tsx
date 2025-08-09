@@ -11,7 +11,7 @@ export default function ResponsiveText({ title }: { title: string }) {
       if (!containerRef.current) return;
       const width = containerRef.current.offsetWidth;
       // Beispiel: Schriftgröße ist 10% der Containerbreite, min 12px max 48px
-      const newSize = Math.min(Math.max(width * 0.1, 12), 48);
+      const newSize = Math.min(Math.max(width * 0.07, 18), 50);
       setFontSize(newSize);
     }
     updateFontSize();
