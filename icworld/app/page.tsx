@@ -9,7 +9,7 @@ export default function Home() {
 			<ResponsiveText title="IC World"/>
 			<InputField placeholder="Search for an IC Nr."/>
 
-			<div className="flex mx-auto w-fulls">
+			<div className="flex">
 				<div className="flex-1">
 					<ResponsiveText title="Left Text" />
 					<div className="p-5"></div>
