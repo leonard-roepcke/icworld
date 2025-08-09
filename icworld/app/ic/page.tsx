@@ -1,14 +1,13 @@
-import ResponsiveText from "@/components/responsiveText";
-import { getAllEntries } from '@/lib/getData';
+import { getAllIcs } from '@/lib/db/ics';
 import DataTable from '@/components/DataTable';
 
-export default async function IcPage() {
-  const data = await getAllEntries();
+export default async function IcsPage() {
+  const ics = await getAllIcs();
 
   return (
     <div>
-      <ResponsiveText title="IC World" />
-      <DataTable data={data} />
+      <h1>Meine Grafik</h1>
+      <DataTable data={ics} />
     </div>
   );
 }

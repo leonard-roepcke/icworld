@@ -17,6 +17,7 @@ export default function DataTable({ data }: Props) {
           <tr key={row.id}>
             <td>{row.id}</td>
             <td>{row.name}</td>
+            {/* weitere Spalten */}
           </tr>
         ))}
       </tbody>
