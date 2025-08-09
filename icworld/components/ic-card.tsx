@@ -1,12 +1,15 @@
+"use client";
 import { useEffect, useState } from "react";
 import ResponsiveText from "./responsiveText";
 import { getIcNameByNr } from "@/lib/db/ics"; 
+import router, { useRouter } from "next/navigation";
 type Props = {
   nr: string;
 };
 
 export default function IcCard({ nr }: Props) {
     const [name, setName] = useState("");
+    const router = useRouter();
 
   useEffect(() => {
     (async () => {
@@ -14,9 +17,15 @@ export default function IcCard({ nr }: Props) {
       setName(result);
     })();
   }, [nr]);
+
+  const handleClick = () => {
+    router.push(`/ic/${nr}`);
+  };
+
+  
   
   return (
-    <div className="p-5 bg-blue-900 mx-5 rounded-xl">
+    <div className="p-5 bg-blue-900 rounded-xl hover:bg-blue-800 cursor-pointer" onClick={handleClick}>
       <ResponsiveText text={name} />
       <ResponsiveText text={nr} />
     </div>

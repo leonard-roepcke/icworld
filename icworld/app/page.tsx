@@ -36,8 +36,8 @@ export default function Home() {
 			
 
 			{ics.map((ic) => (
-				<div className="p-5">
-					<IcCard key={ic.nr} nr={ic.nr} />
+				<div key={ic.nr} className="p-5 ">
+					<IcCard  nr={ic.nr} />
 				</div>
         		
       		))}
