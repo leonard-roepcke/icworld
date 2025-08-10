@@ -25,9 +25,12 @@ export default function IcCard({ nr }: Props) {
   
   
   return (
-    <div className="p-5 bg-blue-900 rounded-xl hover:bg-blue-800 cursor-pointer" onClick={handleClick}>
-      <ResponsiveText text={name} />
-      <ResponsiveText text={nr} />
+    <div className="flex justify-center">
+      <div className="p-5 px-25 bg-blue-900 rounded-xl hover:bg-blue-800 cursor-pointer" onClick={handleClick}>
+          <ResponsiveText text={name} />
+          <ResponsiveText text={nr} />
+        </div>
     </div>
+    
   );
 }

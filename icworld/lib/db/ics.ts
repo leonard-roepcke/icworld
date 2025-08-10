@@ -20,3 +20,25 @@ export async function getIcNameByNr(nr: string) {
   return data.name;
 }
 
+export async function getIcPinoutByNr(nr: string) {
+  const { data, error } = await supabase
+    .from('ics')
+    .select('*')
+    .eq('nr', nr)
+    .single();
+
+  if (error) throw new Error(error.message);
+  return data.pinout || ""; 
+}
+
+export async function getIcVidByNr(nr: string) {
+  const { data, error } = await supabase
+    .from('ics')
+    .select('*')
+    .eq('nr', nr)
+    .single();
+
+  if (error) throw new Error(error.message);
+  return data.vid || ""; 
+}
+
