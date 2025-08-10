@@ -10,7 +10,7 @@ export default function AskiArt({ asciiArt }: { asciiArt: string }) {
         style={{
           fontFamily: "monospace",
           whiteSpace: "pre",
-          backgroundColor: "#111",
+          backgroundColor: "#00000000",
           color: "#0f0",
           padding: "1rem",
           borderRadius: "8px",

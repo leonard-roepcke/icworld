@@ -31,7 +31,7 @@ export default function VideoEmbed({ vid }: Props) {
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
   return (
-    <div
+    <div className="rounded-xl"
       style={{
         position: "relative",
         paddingBottom: "56.25%", // 16:9 ratio
